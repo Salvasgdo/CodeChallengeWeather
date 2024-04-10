@@ -22,7 +22,6 @@ export default function HomeScreen() {
 
   useEffect(() => {
     const searchName = async () => {
-      console.log(city.trim());
       if (city.trim() !== '') {
         const data = await fetchName(city);
         setSearchResults(data || []);
@@ -36,7 +35,6 @@ export default function HomeScreen() {
 
   useEffect(() => {
     if (selectedName) {
-      console.log(selectedName);
       fetchData(selectedName.lat, selectedName.long);
     }
   }, [selectedName]);
