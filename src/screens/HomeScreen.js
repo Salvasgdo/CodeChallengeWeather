@@ -177,7 +177,7 @@ export default function HomeScreen() {
             <View style={styles.forecastContainer}>
               {dailyForecast && (
                 <FlatList
-                  data={dailyForecast.daily.slice(0, 7)}
+                  data={dailyForecast.daily}
                   renderItem={renderItem7day}
                   keyExtractor={item => item.dt}
                 />
